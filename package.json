@@ -1,0 +1,13 @@
+{
+  "name": "sarthak-chadha-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:communication": "npm --prefix apps/communication-systems run build"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
