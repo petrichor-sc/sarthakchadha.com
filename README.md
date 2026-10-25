@@ -2,6 +2,8 @@
 
 A complete static portfolio connecting engineering, research and perfumery.
 
+**New: a cinematic Communication Systems introduction.** The question appears first, then a satellite-phone message travels through space, past a satellite and around Earth to its receiver. The illuminated outline reveal follows the style of the Essentia opening. Optional soft audio, skip, keyboard access and replay are included. See `RADIO_INTRO.md` for the sequence and editing instructions.
+
 **Start with `START_HERE.txt`.** This updated package is ready to replace the files in your existing website repository. The cause of the old Communication Systems app and the update steps are in `DIAGNOSIS_AND_UPDATE.md`. Detailed first-time GitHub, DNS, HTTPS and domain-forwarding instructions are in `GITHUB_AND_IONOS_SETUP.md`.
 
 ## Update your existing website
@@ -68,7 +70,7 @@ npm run build:all
 
 Then commit and push the source and the complete root `docs/` output. `build:all` runs `build:communication` followed by the portfolio build. `npm run build` alone copies the app's existing prebuilt export; it does not compile React/TypeScript source.
 
-The portfolio build replaces the published app folder, then adds its return link. The app keeps its own interface, signal model and browser storage behavior. Keep its existing URL so browser notes continue to use the same storage scope.
+The portfolio build synchronizes the introduction from the app's `public/` folder, replaces the published app folder, then adds its return link. The app keeps its own interface, signal model and browser storage behavior. Keep its existing URL so browser notes continue to use the same storage scope. Keep `public/signal-intro.css`, `public/signal-intro.js` and the intro tags in the app's source `index.html` when merging future app projects.
 
 ## Content still to add
 

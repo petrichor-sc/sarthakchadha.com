@@ -1,12 +1,13 @@
-SARTHAKCHADHA.COM — UPDATED WEBSITE — 25 OCTOBER 2026
+SARTHAKCHADHA.COM — RADIO INTRODUCTION — 25 OCTOBER 2026
 
 The complete updated website is ready in the root docs/ folder.
 The Communication Systems app now uses the updated supplied project.
+It opens with the question, then an illuminated satellite-message journey.
 No Node.js installation or local build is required to publish this package.
 
 UPDATE YOUR EXISTING WEBSITE
 
-1. Extract this ZIP and open the sarthakchadha.com-updated folder.
+1. Extract this ZIP and open the sarthakchadha.com-radio-intro folder.
 2. Copy its CONTENTS into your existing website repository's root.
    At the repository root you should see docs, apps, public, src, scripts,
    package.json and README.md. Avoid adding another enclosing folder.
@@ -20,8 +21,11 @@ UPDATE YOUR EXISTING WEBSITE
 6. Wait for the Pages deployment to finish successfully, then open:
    https://sarthakchadha.com/projects/communication-systems/
 7. If the old layout remains after deployment, hard-refresh with Ctrl+Shift+R.
-   The new app includes Explore transmitter, Explore receiver, and
-   Inside the software receiver.
+   The introduction begins with "Ever wondered how radio communication
+   happens?" and then shows the message travelling via a satellite.
+   Choose Sound off to enable the soft send/receive tones, or Skip intro
+   to enter immediately. It enters automatically after about 11 seconds.
+   Replay intro is available in the app's portfolio return bar.
 
 WHY THE OLD APP APPEARED
 
@@ -45,5 +49,6 @@ After editing app source, install its dependencies and rebuild both parts:
 Then commit and push the updated source AND root docs/ output.
 
 See DIAGNOSIS_AND_UPDATE.md for the evidence and README.md for build details.
+See RADIO_INTRO.md for the new introduction and how to edit it.
 This ZIP does not change your live repository, DNS, or hosting settings.
 

@@ -7,7 +7,15 @@ const dist = path.join(root,'docs');
 const applicationSource=path.join(root,'apps/communication-systems/docs');
 const applicationOutput=path.join(dist,'projects/communication-systems');
 // Check the supplied export before replacing the generated, published copy.
-await readFile(path.join(applicationSource,'index.html'),'utf8');
+let applicationHTML=await readFile(path.join(applicationSource,'index.html'),'utf8');
+// The introduction lives in public/ so it also survives a full Vite rebuild.
+// Synchronize it when integrating a prebuilt app without installing dependencies.
+for (const name of ['signal-intro.css','signal-intro.js']) {
+ await copyFile(path.join(root,'apps/communication-systems/public',name),path.join(applicationSource,name));
+}
+if(!applicationHTML.includes('signal-intro.css'))applicationHTML=applicationHTML.replace('</head>','<link rel="stylesheet" href="./signal-intro.css"></head>');
+if(!applicationHTML.includes('signal-intro.js'))applicationHTML=applicationHTML.replace('</head>','<script defer src="./signal-intro.js"></script></head>');
+await writeFile(path.join(applicationSource,'index.html'),applicationHTML);
 await mkdir(dist,{recursive:true});
 await cp(path.join(root,'public'),dist,{recursive:true});
 await mkdir(path.join(dist,'projects'),{recursive:true});

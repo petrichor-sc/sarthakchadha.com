@@ -2,6 +2,8 @@
 
 Prepared 25 October 2026 from `sarthakchadha.com-main.zip` and `Communication_Systems-main.zip`.
 
+This record documents the original stale-app repair. This package also adds the requested animated entry; see `RADIO_INTRO.md` for that addition.
+
 ## Cause confirmed in the supplied files
 
 The website has separate app source, app build output, and website publishing output:
@@ -39,7 +41,7 @@ The portfolio design, other projects, photos, custom-domain file and return-to-p
 
 ## Publish this ZIP
 
-1. Extract the ZIP. Copy the **contents** of `sarthakchadha.com-updated/` into the root of the existing website repository.
+1. Extract the ZIP. Copy the **contents** of `sarthakchadha.com-radio-intro/` into the root of the existing website repository.
 2. Commit and push the changed files, including the complete root `docs/` directory. Updating only `apps/` will reproduce the original issue.
 3. Keep the existing branch-based **main → /docs** publishing source and custom domain.
 4. Wait for the Pages deployment to succeed. Open `https://sarthakchadha.com/projects/communication-systems/` and hard-refresh with **Ctrl+Shift+R** if necessary.
@@ -70,9 +72,9 @@ The app's own README describes publishing the app as a standalone repository. Fo
 
 - The existing app tests pass, covering signal calculations, notebook backups, UTF-8/PAM encoding, ADC behavior, channel effects, and software-receiver calculations.
 - The portfolio build completes and produces identical output on a repeat build. A temporary obsolete asset is removed by the revised integration step.
-- All 74 local HTML links and asset references resolve in the generated website.
+- All 76 local HTML links and asset references resolve in the generated website, including the new intro stylesheet and script.
 - All five published HTML pages, the app's current JavaScript/CSS, its favicon, and the custom-domain file return HTTP 200 when served locally.
 - The published app's JavaScript and CSS match the supplied update byte for byte. All 16 app source files remain unchanged.
 - Every published website file outside the Communication Systems app remains byte for byte identical to the original website archive, including `docs/CNAME`.
 
-This repair integrates the supplied prebuilt app; it does not require recompiling its React/TypeScript source. These are local file, build, numerical, and HTTP checks; the live website has not been deployed or verified by this package.
+This repair integrates the supplied prebuilt app; it does not require recompiling its React/TypeScript source. The added intro has also been checked in a local browser preview at desktop and phone widths. The live website has not been deployed by this package.
