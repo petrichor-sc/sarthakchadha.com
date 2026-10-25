@@ -2,7 +2,13 @@
 
 A complete static portfolio connecting engineering, research and perfumery.
 
-**Start with `START_HERE.txt`.** Detailed GitHub, DNS, HTTPS and domain-forwarding instructions are in `GITHUB_AND_IONOS_SETUP.md`.
+**Start with `START_HERE.txt`.** This updated package is ready to replace the files in your existing website repository. The cause of the old Communication Systems app and the update steps are in `DIAGNOSIS_AND_UPDATE.md`. Detailed first-time GitHub, DNS, HTTPS and domain-forwarding instructions are in `GITHUB_AND_IONOS_SETUP.md`.
+
+## Update your existing website
+
+The complete updated website is already built in the root `docs/` folder. Copy this package's contents into the root of your existing website repository, commit and push the changed files, including the complete root `docs/` directory. Keep the existing repository, domain and **Pages → main → /docs** publishing source. No local build is needed to publish this ZIP.
+
+The source under `apps/communication-systems/` was already current in your supplied website ZIP; the published copy under `docs/projects/communication-systems/` was still old. This package synchronizes them. Updating only `apps/` does not update a site published from the root `docs/`.
 
 ## Publish the first version
 
@@ -44,15 +50,25 @@ Upload the resulting `docs/` changes. Portfolio content is in `scripts/build.mjs
 
 ## Update Communication Systems
 
-Its original React/TypeScript source, dependency lockfile, README and third-party notices are preserved under `apps/communication-systems/`.
+Its React/TypeScript source, dependency lockfile, README and third-party notices are preserved under `apps/communication-systems/`.
 
-1. Install its dependencies with `npm --prefix apps/communication-systems ci`.
-2. Make the application changes.
-3. Build the application with `npm run build:communication`.
-4. Run `npm run build` from this repository's root to copy the updated app into the portfolio.
-5. Upload the changed source and `docs/` output to GitHub.
+If replacing the app with a new project that already includes its built `docs/` folder:
 
-The portfolio build adds its return link after copying the application's prebuilt export. The app keeps its own interface, signal model and browser storage behavior.
+1. Replace the contents of `apps/communication-systems/` with the app project contents. Its `package.json` must be directly inside that folder.
+2. From the website repository root, run `npm run build`.
+3. Commit and push the updated `apps/` files and the complete root `docs/` folder.
+
+If editing React/TypeScript source, rebuild both the app and the website from the website repository root:
+
+```sh
+npm --prefix apps/communication-systems ci
+npm --prefix apps/communication-systems test
+npm run build:all
+```
+
+Then commit and push the source and the complete root `docs/` output. `build:all` runs `build:communication` followed by the portfolio build. `npm run build` alone copies the app's existing prebuilt export; it does not compile React/TypeScript source.
+
+The portfolio build replaces the published app folder, then adds its return link. The app keeps its own interface, signal model and browser storage behavior. Keep its existing URL so browser notes continue to use the same storage scope.
 
 ## Content still to add
 
@@ -62,7 +78,9 @@ The portfolio build adds its return link after copying the application's prebuil
 
 ## Input provenance
 
-Communication Systems is imported from the uploaded `Communication_Systems_GitHub_Pages.zip`.
+The original portfolio imported Communication Systems from `Communication_Systems_GitHub_Pages.zip`.
 
 SHA-256: `2d50d38c5bce82f669445b8833bcb3077b1280209bdcec11dfd20bce61339e3e`.
+
+This update uses the supplied `Communication_Systems-main.zip`. Its current JavaScript and CSS bundles are copied unchanged into the published application; obsolete, unreferenced app bundles from earlier exports are removed. See `DIAGNOSIS_AND_UPDATE.md` for the compared filenames and validation.
 

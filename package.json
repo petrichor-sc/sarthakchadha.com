@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "build:communication": "npm --prefix apps/communication-systems run build"
+    "build:communication": "npm --prefix apps/communication-systems run build",
+    "build:all": "npm run build:communication && npm run build"
   },
   "engines": {
     "node": ">=22.13.0"

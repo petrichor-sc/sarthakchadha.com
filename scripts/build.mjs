@@ -1,13 +1,18 @@
-import {mkdir,writeFile,copyFile,readFile,cp} from 'node:fs/promises';
+import {mkdir,writeFile,copyFile,readFile,cp,rm} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const dist = path.join(root,'docs');
+const applicationSource=path.join(root,'apps/communication-systems/docs');
+const applicationOutput=path.join(dist,'projects/communication-systems');
+// Check the supplied export before replacing the generated, published copy.
+await readFile(path.join(applicationSource,'index.html'),'utf8');
 await mkdir(dist,{recursive:true});
 await cp(path.join(root,'public'),dist,{recursive:true});
 await mkdir(path.join(dist,'projects'),{recursive:true});
-await cp(path.join(root,'apps/communication-systems/docs'),path.join(dist,'projects/communication-systems'),{recursive:true});
+await rm(applicationOutput,{recursive:true,force:true});
+await cp(applicationSource,applicationOutput,{recursive:true});
 await mkdir(path.join(dist,'assets'),{recursive:true});
 for (const name of ['site.css','site.js']) await copyFile(path.join(root,'src',name),path.join(dist,'assets',name));
 
