@@ -1,41 +1,54 @@
-COMMUNICATION SYSTEMS — PUBLISH IN A FEW STEPS
+SARTHAKCHADHA.COM — RADIO INTRODUCTION — 25 OCTOBER 2026
 
-1. Extract this ZIP.
-2. Create a new public GitHub repository, for example communication-systems.
-3. Upload the CONTENTS of the communication-systems-github-pages folder.
-   The repository root should contain docs, src, package.json, and README.md.
-4. Open Settings > Pages.
-5. Select Deploy from a branch > main > /docs > Save.
-6. When GitHub finishes, click Visit site and share that link.
+The complete updated website is ready in the root docs/ folder.
+The Communication Systems app now uses the updated supplied project.
+It opens with the question, then an illuminated satellite-message journey.
+No Node.js installation or local build is required to publish this package.
 
-The docs folder is already built. You do not need to install Node.js for this route.
+UPDATE YOUR EXISTING WEBSITE
 
-Each person's notes stay in their browser. In My notes, use Download backup and
-Import backup / notes to transfer notes between devices. Source PDFs can be
-attached locally under Source materials; they are not bundled in this package.
+1. Extract this ZIP and open the sarthakchadha.com-radio-intro folder.
+2. Copy its CONTENTS into your existing website repository's root.
+   At the repository root you should see docs, apps, public, src, scripts,
+   package.json and README.md. Avoid adding another enclosing folder.
+3. Include ALL of the root docs/ folder in the update. In particular:
+   docs/projects/communication-systems/index.html
+   docs/projects/communication-systems/assets/
+   Replacing only apps/communication-systems/ is not enough.
+4. Commit and push the changes to the branch your existing site publishes.
+5. For the branch-based setup documented in this project, keep GitHub Pages
+   set to Deploy from a branch > main > /docs. Keep the existing custom domain.
+6. Wait for the Pages deployment to finish successfully, then open:
+   https://sarthakchadha.com/projects/communication-systems/
+7. If the old layout remains after deployment, hard-refresh with Ctrl+Shift+R.
+   The introduction begins with "Ever wondered how radio communication
+   happens?" and then shows the message travelling via a satellite.
+   Choose Sound off to enable the soft send/receive tones, or Skip intro
+   to enter immediately. It enters automatically after about 11 seconds.
+   Replay intro is available in the app's portfolio return bar.
 
-README.md contains the complete instructions, local development commands,
-updates, automatic GitHub Actions deployment, and troubleshooting.
+WHY THE OLD APP APPEARED
 
-ALREADY PUBLISHED?
-Replace the project contents in your existing repository, including all of docs,
-then commit/push. Keep Pages set to main > /docs. Your existing site URL stays
-the same, and browser notes at that URL remain compatible.
+The app project in apps/ already matched the new project. The public-facing
+copy under the root docs/ directory still referenced an older JavaScript
+bundle. The missing step was integrating the app export into the website.
 
-Start with Signal journey: type Hello, click a node, or press Play journey.
-Use Animate signal to keep a waveform moving while exploring one step.
-Course map connects all lecture sections; Chapters opens the optional drawer.
+FUTURE UPDATES
 
-APP UPDATE — VERSION 1.3
-Separate transmitter and receiver explorers now have outlined boundaries,
-clickable text / code / symbols / baseband / RF stages, and their own replay.
-The physical-channel diagram includes fading, delay, echo, interference and noise.
-ASP / DSP covers RF-to-IF mixing, filtering, ADC sampling and aliasing.
-Inside the software receiver opens all six blocks from Lecture 0 slide 24.
-The Lecture 0 guide covers printed slides 1–25, including dedicated 18–24 topics,
-book references, and prompts that save to My notes.
-The Data / Voltage / EM field legend is clearly separated above the main map.
+After replacing the app with a project that includes a current built docs/
+folder, run this from the WEBSITE repository root:
 
-Dark theme with purple accents, a live signal illustration beside the map,
-pause-on-explore playback, developer credit, and an About page are included.
-Website/domain integration is deferred; this package changes only the app.
+  npm run build
+
+After editing app source, install its dependencies and rebuild both parts:
+
+  npm --prefix apps/communication-systems ci
+  npm --prefix apps/communication-systems test
+  npm run build:all
+
+Then commit and push the updated source AND root docs/ output.
+
+See DIAGNOSIS_AND_UPDATE.md for the evidence and README.md for build details.
+See RADIO_INTRO.md for the new introduction and how to edit it.
+This ZIP does not change your live repository, DNS, or hosting settings.
+
