@@ -1,54 +1,55 @@
-SARTHAKCHADHA.COM — RADIO INTRODUCTION — 25 OCTOBER 2026
+SARTHAKCHADHA.COM — TALKS, TEACHING & MEDIA — 26 OCTOBER 2026
 
-The complete updated website is ready in the root docs/ folder.
-The Communication Systems app now uses the updated supplied project.
-It opens with the question, then an illuminated satellite-message journey.
-No Node.js installation or local build is required to publish this package.
+The complete ready-to-publish website is in the root docs/ folder.
+
+THIS UPDATE
+
+- A compact Teaching & public engagement section on the homepage.
+- A Talks & Engagement page with photographs and short accounts of:
+  * Guest lecture: Scent, mind & interaction / Psychology for UX Practitioners.
+  * Science Café: Botanical extraction research with Raphael Komanek, June 2025.
+  * University open day: Synesthesia VR and Pepper demonstrations.
+- A reference to Rheinische Post coverage, with the supplied press clipping.
+- The previous Laborfunk homepage feature and Synesthesia photo section.
+
+All eight newly supplied images are included. The supplied photo files have
+been retained without changing their content. Visitors can open the full-size
+images on the Talks & Engagement page.
 
 UPDATE YOUR EXISTING WEBSITE
 
-1. Extract this ZIP and open the sarthakchadha.com-radio-intro folder.
-2. Copy its CONTENTS into your existing website repository's root.
-   At the repository root you should see docs, apps, public, src, scripts,
-   package.json and README.md. Avoid adding another enclosing folder.
-3. Include ALL of the root docs/ folder in the update. In particular:
-   docs/projects/communication-systems/index.html
-   docs/projects/communication-systems/assets/
-   Replacing only apps/communication-systems/ is not enough.
-4. Commit and push the changes to the branch your existing site publishes.
-5. For the branch-based setup documented in this project, keep GitHub Pages
-   set to Deploy from a branch > main > /docs. Keep the existing custom domain.
-6. Wait for the Pages deployment to finish successfully, then open:
-   https://sarthakchadha.com/projects/communication-systems/
-7. If the old layout remains after deployment, hard-refresh with Ctrl+Shift+R.
-   The introduction begins with "Ever wondered how radio communication
-   happens?" and then shows the message travelling via a satellite.
-   Choose Sound off to enable the soft send/receive tones, or Skip intro
-   to enter immediately. It enters automatically after about 11 seconds.
-   Replay intro is available in the app's portfolio return bar.
+1. Extract this ZIP and open the sarthakchadha.com-main folder.
+2. Copy its CONTENTS into your existing website repository root.
+   At the root you should see docs, apps, public, src, scripts and package.json.
+   Avoid adding another enclosing folder.
+3. Include the updated root docs/ folder, not only public/ or src/.
+4. Commit and push the changes to the branch your existing website publishes.
+5. For the existing branch-based GitHub Pages setup, keep the publishing
+   folder set to main > /docs and retain your current custom domain.
+6. After deployment finishes, check:
+   https://sarthakchadha.com/#talks
+   https://sarthakchadha.com/talks/
+   https://sarthakchadha.com/#featured
+   Hard-refresh with Ctrl+Shift+R if an old version is cached.
 
-WHY THE OLD APP APPEARED
+No local Node.js build is required to publish the supplied docs/ folder.
 
-The app project in apps/ already matched the new project. The public-facing
-copy under the root docs/ directory still referenced an older JavaScript
-bundle. The missing step was integrating the app export into the website.
+FUTURE EDITS
 
-FUTURE UPDATES
+Talk descriptions, images and references: src/engagement.mjs
+Other homepage and project content: scripts/build.mjs
+Shared styling: src/site.css
+Original supplied photo files: public/assets/
 
-After replacing the app with a project that includes a current built docs/
-folder, run this from the WEBSITE repository root:
+The guest lecture and Science Café references currently open the existing
+LinkedIn profile. When individual post URLs are available, replace their
+engagementSources URLs in src/engagement.mjs and change the corresponding
+labels to describe the individual posts. No guessed post URLs are used.
+The newspaper reference opens the supplied clipping.
 
+After editing these sources, run from the repository root:
   npm run build
 
-After editing app source, install its dependencies and rebuild both parts:
-
-  npm --prefix apps/communication-systems ci
-  npm --prefix apps/communication-systems test
-  npm run build:all
-
-Then commit and push the updated source AND root docs/ output.
-
-See DIAGNOSIS_AND_UPDATE.md for the evidence and README.md for build details.
-See RADIO_INTRO.md for the new introduction and how to edit it.
-This ZIP does not change your live repository, DNS, or hosting settings.
-
+Commit both the edited source and generated docs/ output.
+The Communication Systems application and its radio introduction are included.
+See RADIO_INTRO.md for that application's introduction and controls.
