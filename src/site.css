@@ -33,6 +33,12 @@
 @media(max-width:360px){.press-copy{padding:24px 19px}.press-copy h3{font-size:41px}.laborfunk-gallery{grid-template-columns:1fr}.laborfunk-gallery img{aspect-ratio:auto;object-fit:contain}}
 @media(max-width:600px){.laborfunk-gallery{grid-template-columns:1fr;gap:24px}.laborfunk-gallery img{aspect-ratio:auto;object-fit:contain}.laborfunk-gallery figcaption{font-size:10px}.laborfunk-gallery figcaption span{font-size:9px}}
 /* Teaching, public talks and open lab demonstrations. */
+.project-media.robotics img{object-position:center 37%}
+.detail-wide.robotics-team-photo img{height:auto;aspect-ratio:1280/854;object-fit:contain}
+.robotics-team-photo figcaption{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 20px;line-height:1.8}
+.robotics-talk-photo img{width:100%;height:auto}
+.robotics-talk-photo figcaption{font-size:10px;line-height:1.8;color:var(--muted);margin-top:11px}
+.robotics-scope li{margin-bottom:10px}
 .about-links{flex-wrap:wrap}
 .engagement-section{background:var(--ivory);border-bottom:1px solid var(--line);padding:74px 0 76px}
 .engagement-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px}

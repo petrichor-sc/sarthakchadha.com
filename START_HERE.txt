@@ -1,9 +1,15 @@
-SARTHAKCHADHA.COM — TALKS, TEACHING & MEDIA — 26 OCTOBER 2026
+SARTHAKCHADHA.COM — ROBOTICS, TEACHING & MEDIA — 26 OCTOBER 2026
 
 The complete ready-to-publish website is in the root docs/ folder.
 
 THIS UPDATE
 
+- Industrial Robotics project page and Selected Work entry, including:
+  * ABB IRB 1100, ROS 2, NVIDIA Isaac Sim and the logistics scenario.
+  * Your co-supervision role alongside Marius Kaul.
+  * AEVTec, TransRegINT and the university collaboration.
+  * Team photograph credited to Andrea Polk.
+- A project-supervision reference on the Talks & Engagement page.
 - A compact Teaching & public engagement section on the homepage.
 - A Talks & Engagement page with photographs and short accounts of:
   * Guest lecture: Scent, mind & interaction / Psychology for UX Practitioners.
@@ -12,7 +18,7 @@ THIS UPDATE
 - A reference to Rheinische Post coverage, with the supplied press clipping.
 - The previous Laborfunk homepage feature and Synesthesia photo section.
 
-All eight newly supplied images are included. The supplied photo files have
+The previous eight images and the new robotics team photograph are included. The supplied photo files have
 been retained without changing their content. Visitors can open the full-size
 images on the Talks & Engagement page.
 
@@ -27,6 +33,8 @@ UPDATE YOUR EXISTING WEBSITE
 5. For the existing branch-based GitHub Pages setup, keep the publishing
    folder set to main > /docs and retain your current custom domain.
 6. After deployment finishes, check:
+   https://sarthakchadha.com/projects/industrial-robotics/
+   https://sarthakchadha.com/talks/#robotics-supervision
    https://sarthakchadha.com/#talks
    https://sarthakchadha.com/talks/
    https://sarthakchadha.com/#featured
@@ -36,6 +44,7 @@ No local Node.js build is required to publish the supplied docs/ folder.
 
 FUTURE EDITS
 
+Robotics case study and project card: src/robotics.mjs
 Talk descriptions, images and references: src/engagement.mjs
 Other homepage and project content: scripts/build.mjs
 Shared styling: src/site.css
