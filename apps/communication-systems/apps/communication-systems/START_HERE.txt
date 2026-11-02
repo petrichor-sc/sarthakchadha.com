@@ -1,0 +1,41 @@
+COMMUNICATION SYSTEMS — PUBLISH IN A FEW STEPS
+
+1. Extract this ZIP.
+2. Create a new public GitHub repository, for example communication-systems.
+3. Upload the CONTENTS of the communication-systems-github-pages folder.
+   The repository root should contain docs, src, package.json, and README.md.
+4. Open Settings > Pages.
+5. Select Deploy from a branch > main > /docs > Save.
+6. When GitHub finishes, click Visit site and share that link.
+
+The docs folder is already built. You do not need to install Node.js for this route.
+
+Each person's notes stay in their browser. In My notes, use Download backup and
+Import backup / notes to transfer notes between devices. Source PDFs can be
+attached locally under Source materials; they are not bundled in this package.
+
+README.md contains the complete instructions, local development commands,
+updates, automatic GitHub Actions deployment, and troubleshooting.
+
+ALREADY PUBLISHED?
+Replace the project contents in your existing repository, including all of docs,
+then commit/push. Keep Pages set to main > /docs. Your existing site URL stays
+the same, and browser notes at that URL remain compatible.
+
+Start with Signal journey: type Hello, click a node, or press Play journey.
+Use Animate signal to keep a waveform moving while exploring one step.
+Course map connects all lecture sections; Chapters opens the optional drawer.
+
+APP UPDATE — VERSION 1.3
+Separate transmitter and receiver explorers now have outlined boundaries,
+clickable text / code / symbols / baseband / RF stages, and their own replay.
+The physical-channel diagram includes fading, delay, echo, interference and noise.
+ASP / DSP covers RF-to-IF mixing, filtering, ADC sampling and aliasing.
+Inside the software receiver opens all six blocks from Lecture 0 slide 24.
+The Lecture 0 guide covers printed slides 1–25, including dedicated 18–24 topics,
+book references, and prompts that save to My notes.
+The Data / Voltage / EM field legend is clearly separated above the main map.
+
+Dark theme with purple accents, a live signal illustration beside the map,
+pause-on-explore playback, developer credit, and an About page are included.
+Website/domain integration is deferred; this package changes only the app.

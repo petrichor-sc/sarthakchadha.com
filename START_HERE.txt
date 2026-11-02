@@ -1,28 +1,64 @@
-SARTHAK CHADHA — PORTFOLIO FOR GITHUB PAGES
+SARTHAKCHADHA.COM — ROBOTICS, TEACHING & MEDIA — 26 OCTOBER 2026
 
-The complete website is ready in docs/.
-Your supplied Communication Systems application is included and opens directly
-from its project card. You do not need Node.js to upload this first version.
+The complete ready-to-publish website is in the root docs/ folder.
 
-1. Extract this ZIP.
-2. Create a NEW public GitHub repository named sarthak-portfolio.
-3. Upload the CONTENTS of the sarthak-portfolio folder to that repository.
-   The repository root should contain docs, apps, public, src, scripts,
-   package.json and README.md.
-4. Open the repository's Settings > Pages.
-5. Choose Deploy from a branch > main > /docs > Save.
-6. After the deployment finishes, use Visit site to test the portfolio.
-7. In Settings > Pages > Custom domain, enter sarthakchadha.com and Save.
-8. Follow GITHUB_AND_IONOS_SETUP.md for the .com DNS records, HTTPS and the
-   .de, .global and .store forwarding settings (including www).
+THIS UPDATE
 
-The canonical public address will be https://sarthakchadha.com/.
-The other personal domains should forward to that address through IONOS.
-Essentia Resonance remains its own website, linked from this portfolio.
+- Industrial Robotics project page and Selected Work entry, including:
+  * ABB IRB 1100, ROS 2, NVIDIA Isaac Sim and the logistics scenario.
+  * Your co-supervision role alongside Marius Kaul.
+  * AEVTec, TransRegINT and the university collaboration.
+  * Team photograph credited to Andrea Polk.
+- A project-supervision reference on the Talks & Engagement page.
+- A compact Teaching & public engagement section on the homepage.
+- A Talks & Engagement page with photographs and short accounts of:
+  * Guest lecture: Scent, mind & interaction / Psychology for UX Practitioners.
+  * Science Café: Botanical extraction research with Raphael Komanek, June 2025.
+  * University open day: Synesthesia VR and Pepper demonstrations.
+- A reference to Rheinische Post coverage, with the supplied press clipping.
+- The previous Laborfunk homepage feature and Synesthesia photo section.
 
-Your IONOS screenshot confirms the domain spelling: sarthakchadha.
-No GitHub account settings, DNS records or forwarding settings have been changed
-by creating this package. They still need to be applied in your accounts.
+The previous eight images and the new robotics team photograph are included. The supplied photo files have
+been retained without changing their content. Visitors can open the full-size
+images on the Talks & Engagement page.
 
-For code editing and future updates, see README.md.
+UPDATE YOUR EXISTING WEBSITE
 
+1. Extract this ZIP and open the sarthakchadha.com-main folder.
+2. Copy its CONTENTS into your existing website repository root.
+   At the root you should see docs, apps, public, src, scripts and package.json.
+   Avoid adding another enclosing folder.
+3. Include the updated root docs/ folder, not only public/ or src/.
+4. Commit and push the changes to the branch your existing website publishes.
+5. For the existing branch-based GitHub Pages setup, keep the publishing
+   folder set to main > /docs and retain your current custom domain.
+6. After deployment finishes, check:
+   https://sarthakchadha.com/projects/industrial-robotics/
+   https://sarthakchadha.com/talks/#robotics-supervision
+   https://sarthakchadha.com/#talks
+   https://sarthakchadha.com/talks/
+   https://sarthakchadha.com/#featured
+   Hard-refresh with Ctrl+Shift+R if an old version is cached.
+
+No local Node.js build is required to publish the supplied docs/ folder.
+
+FUTURE EDITS
+
+Robotics case study and project card: src/robotics.mjs
+Talk descriptions, images and references: src/engagement.mjs
+Other homepage and project content: scripts/build.mjs
+Shared styling: src/site.css
+Original supplied photo files: public/assets/
+
+The guest lecture and Science Café references currently open the existing
+LinkedIn profile. When individual post URLs are available, replace their
+engagementSources URLs in src/engagement.mjs and change the corresponding
+labels to describe the individual posts. No guessed post URLs are used.
+The newspaper reference opens the supplied clipping.
+
+After editing these sources, run from the repository root:
+  npm run build
+
+Commit both the edited source and generated docs/ output.
+The Communication Systems application and its radio introduction are included.
+See RADIO_INTRO.md for that application's introduction and controls.
