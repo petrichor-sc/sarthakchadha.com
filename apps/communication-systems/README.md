@@ -203,3 +203,12 @@ Publishing in your own GitHub account is a separate step performed by you; this 
 - [GitHub Pages custom workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
 
 This study companion should be used alongside the original course material. Guided checkpoints do not replace your own full derivations or every subpart of the original exercises.
+
+
+## Octave tutorials
+
+Open **Octave tutorials** in the main menu. Tutorial 1 (`#octave`) explains sampling times and stored vectors. Tutorial 2 (`#octave-step`) adds a DT unit step, an editable script, a stem plot, and line-by-line explanations. It repeats the sampling-time setup so the downloaded `.m` script can run independently in Octave without packages.
+
+The website uses bounded browser simulations of the displayed commands, rather than a full Octave interpreter. Tutorial 2 accepts edits to Ts, time limits, the threshold, `>=`/`>`, axis labels, and `grid on`/`grid off`. Its plot supports up to 301 samples. Unsupported code produces an explanatory error. The sample inspector shows the stored time, comparison result, and numeric amplitude.
+
+Run `npm test` for the existing signal checks and unit-step simulation checks; run `npm run build` to regenerate the ready-to-host `docs/` folder.
