@@ -1,64 +1,64 @@
-SARTHAKCHADHA.COM — ROBOTICS, TEACHING & MEDIA — 26 OCTOBER 2026
+SARTHAKCHADHA.COM — OCTAVE TUTORIALS UPDATE — 2 NOVEMBER 2026
 
-The complete ready-to-publish website is in the root docs/ folder.
+This is the complete website, already built and ready to publish.
+The ZIP contains one sarthakchadha.com folder. Inside it are docs, apps,
+public, src, scripts and package.json.
 
-THIS UPDATE
+UPDATE THE WEBSITE WITH GITHUB DESKTOP
 
-- Industrial Robotics project page and Selected Work entry, including:
-  * ABB IRB 1100, ROS 2, NVIDIA Isaac Sim and the logistics scenario.
-  * Your co-supervision role alongside Marius Kaul.
-  * AEVTec, TransRegINT and the university collaboration.
-  * Team photograph credited to Andrea Polk.
-- A project-supervision reference on the Talks & Engagement page.
-- A compact Teaching & public engagement section on the homepage.
-- A Talks & Engagement page with photographs and short accounts of:
-  * Guest lecture: Scent, mind & interaction / Psychology for UX Practitioners.
-  * Science Café: Botanical extraction research with Raphael Komanek, June 2025.
-  * University open day: Synesthesia VR and Pepper demonstrations.
-- A reference to Rheinische Post coverage, with the supplied press clipping.
-- The previous Laborfunk homepage feature and Synesthesia photo section.
+1. Extract the ZIP.
+2. Open the extracted sarthakchadha.com folder. Copy its CONTENTS into
+   the existing website repository folder, replacing matching files.
+   Keep your existing repository and its Git history. Do not put the
+   entire extracted folder inside the repository as an extra subfolder.
+3. Confirm that docs/projects/communication-systems/index.html and its
+   assets folder are included in your GitHub Desktop changes.
+4. Commit and push to the branch used by your website.
+5. For your existing branch-based GitHub Pages setup, retain main /docs
+   as the publishing source and sarthakchadha.com as the custom domain.
+6. Wait for the website deployment to finish, then press Ctrl+Shift+R.
 
-The previous eight images and the new robotics team photograph are included. The supplied photo files have
-been retained without changing their content. Visitors can open the full-size
-images on the Talks & Engagement page.
+No Node.js installation or local build is required to publish this ZIP.
 
-UPDATE YOUR EXISTING WEBSITE
+FIND THE TUTORIALS
 
-1. Extract this ZIP and open the sarthakchadha.com-main folder.
-2. Copy its CONTENTS into your existing website repository root.
-   At the root you should see docs, apps, public, src, scripts and package.json.
-   Avoid adding another enclosing folder.
-3. Include the updated root docs/ folder, not only public/ or src/.
-4. Commit and push the changes to the branch your existing website publishes.
-5. For the existing branch-based GitHub Pages setup, keep the publishing
-   folder set to main > /docs and retain your current custom domain.
-6. After deployment finishes, check:
-   https://sarthakchadha.com/projects/industrial-robotics/
-   https://sarthakchadha.com/talks/#robotics-supervision
-   https://sarthakchadha.com/#talks
-   https://sarthakchadha.com/talks/
-   https://sarthakchadha.com/#featured
-   Hard-refresh with Ctrl+Shift+R if an old version is cached.
+Open Communication Systems from Projects, then choose Octave tutorials
+in its top navigation (or Chapters on a smaller screen).
 
-No local Node.js build is required to publish the supplied docs/ folder.
+01 - Sampling time: Ts, t, and the first five stored values.
+02 - DT unit step: double(t >= 0), a stem plot, and line-by-line explanations.
 
-FUTURE EDITS
+Direct entry points after deployment:
+https://sarthakchadha.com/projects/communication-systems/#octave
+https://sarthakchadha.com/projects/communication-systems/#octave-step
 
-Robotics case study and project card: src/robotics.mjs
-Talk descriptions, images and references: src/engagement.mjs
-Other homepage and project content: scripts/build.mjs
-Shared styling: src/site.css
-Original supplied photo files: public/assets/
+Both lessons use browser simulations of the displayed Octave commands.
+The general Octave introduction is linked from Tutorial 1.
 
-The guest lecture and Science Café references currently open the existing
-LinkedIn profile. When individual post URLs are available, replace their
-engagementSources URLs in src/engagement.mjs and change the corresponding
-labels to describe the individual posts. No guessed post URLs are used.
-The newspaper reference opens the supplied clipping.
+WHAT WAS FIXED
 
-After editing these sources, run from the repository root:
+The source app export had the new tutorial code while the published website
+copy still loaded an older app bundle. This package rebuilds the app and
+copies its matching index, JavaScript, CSS and intro files into the root
+published docs folder. The unnecessary nested copies from the uploaded
+app folder are not part of this package.
+
+The portfolio pages, photographs, custom domain and radio intro are retained.
+
+FUTURE SOURCE EDITS
+
+For portfolio-only edits, run from the repository root:
   npm run build
 
-Commit both the edited source and generated docs/ output.
-The Communication Systems application and its radio introduction are included.
-See RADIO_INTRO.md for that application's introduction and controls.
+For React/TypeScript changes to the Communication Systems app, first run:
+  npm ci --prefix apps/communication-systems
+Then from the repository root:
+  npm run build:all
+
+Commit the changed sources AND the regenerated root docs folder.
+The inner apps/communication-systems/docs folder is the standalone app
+export. The root docs/projects/communication-systems folder is the copy
+that your website publishes. build:all updates both in order.
+
+Builds, signal tests, unit-step simulator tests and local file references
+were checked. Browser checks were skipped as requested.
