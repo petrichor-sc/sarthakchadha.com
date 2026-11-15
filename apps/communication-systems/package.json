@@ -10,7 +10,7 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "node --experimental-strip-types tests/verify.mjs"
+    "test": "node --experimental-strip-types tests/verify.mjs && node --experimental-strip-types tests/octave-step.mjs"
   },
   "dependencies": {
     "react": "19.2.6",
